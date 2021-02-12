@@ -1,0 +1,140 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-grey: hsl(204, 43%, 93%);
+    --gray-blue: hsl(218, 22%, 67%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size:16px;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+}
+p{
+    line-height:1.75rem; ;
+}
+
+.container{
+    background-color: #E6EFF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    width: 80%;
+    max-width: 300px;
+}
+
+.header, .price, .about{
+    padding: 2rem;
+}
+
+.header{
+    background-color: white;
+}
+.price{
+    background-color: var(--cyan);
+    color: white;
+}
+.about{
+    background-color: #4ABDBB;
+    color:white;
+}
+
+.header h2{
+    color: var(--cyan);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.header h3{
+    color: var(--bright-yellow);
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+.header p{
+    color: var(--gray-blue);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price h2{
+    font-size:16px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.price h3{
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+.price span{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 0.25rem;
+}
+
+.price p{
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.price button{
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bright-yellow);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.price button:hover{
+    letter-spacing: 8px;
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.8);
+    transition: all 0.4s ease 0s;
+}
+
+.about li{
+    font-size:14px;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.25rem;
+}
+
+.about h2{
+    margin-bottom: 1.75rem;
+
+}
+
+
+
+@media (min-width: 650px){
+    .card{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.75fr 1.25fr;
+        max-width: 600px;
+    }
+    .header{
+
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .price{
+       grid-column: 1/2;
+    }
+
+    .about{
+        grid-column: 2/3;
+    }
+}
